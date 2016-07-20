@@ -42,8 +42,8 @@ bool    keys[1024];
 glm::vec3 lightPos(1.2f, 1.0f, 2.0f);
 
 // Deltatime
-GLfloat deltaTime = 0.0f;	// Time between current frame and last frame
-GLfloat lastFrame = 0.0f;  	// Time of last frame
+GLfloat deltaTime = 0.0f;   // Time between current frame and last frame
+GLfloat lastFrame = 0.0f;   // Time of last frame
 
 // The MAIN function, from here we start the application and run the game loop
 int main()
@@ -179,7 +179,7 @@ int main()
         glUniform3f(objectColorLoc, 1.0f, 0.5f, 0.31f);
         glUniform3f(lightColorLoc,  1.0f, 1.0f, 1.0f);
         glUniform3f(lightPosLoc,    lightPos.x, lightPos.y, lightPos.z);
-        glUniform3f(viewPosLoc,     camera.Position.x - 3, camera.Position.y, camera.Position.z);
+        glUniform3f(viewPosLoc,     camera.Position.x, camera.Position.y, camera.Position.z);
 
 
 
@@ -261,7 +261,3 @@ void scroll_callback(GLFWwindow* window, double xoffset, double yoffset)
 {
     camera.ProcessMouseScroll(yoffset);
 }
-
-
-// uniform mat4 model = [[1,0,0,0],[0,1,0,0][0,0,1,0],[2,3,0,1]]*[[1,0,0,0],[0,1,0,0][0,0,1,0],[0,0,0,1]];
-

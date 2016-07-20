@@ -19,6 +19,6 @@ void main()
     gl_Position = projection * view * model * vec4(position, 1.0f);
     FragPos = vec3(model * vec4(position,1.0f));
     // Perform normal matrix transformation
-    Normal = mat3(transpose(inverse(model))) * normal; 
-    
+    Normal = normal;
+
 } 
